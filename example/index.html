@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nervos Community FAQ</title>
+
+    <style media="screen">
+        .badger-accordion__panel {
+            max-height: 75vh;
+            overflow: hidden;
+        }
+
+        .badger-accordion__panel.-ba-is-hidden {
+            max-height: 0 !important;
+            visibility: hidden;
+        }
+
+        .badger-accordion--initialized .badger-accordion__panel {
+            transition: all ease-in-out 0.2s;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/badger-accordion-demo.css">
+    <link rel="stylesheet" href="css/flatly-bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Josefin+Slab:600&text=Badger%20Accordion%20Nest">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+
+</head>
+
+<body>
+    <main id="main">
+        <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+            <section class="container landmark">
+                <header class="header">
+                    <img src="nclogo.png" style="width: 100%;height: auto;">
+                    <p>这里是 Nervos Community 提供内容支持和技术支持的 FAQ 专栏</p>
+                    <p>Nervos Community 是由 Nervos 爱好者自发形成的社区组织，我们希望通过 FAQ 专栏帮助大家快速地了解 Nervos</p>
+                    <p>如果区块链世界注定浮躁，希望 Nervos 依然是你我心中的净土</p>
+                    <p>一切为了更好的 Nervos，为了更好的世界</p>
+                    <br>
+                    <ul class="inline-list">
+                        <li class="inline-list__item">
+                            <a href="https://www.nervos.im" class="icon-link"
+                                rel="noopener nofollow" target="_blank">
+                                <span class="vh">Link to home</span>
+                                <span class="icon-link__text">
+                                    Nervos Community 主页
+                                </span>
+                            </a>
+                        </li>
+                        <li class="inline-list__item">
+                            <a href="mailto:nervoscommunity@163.com" class="icon-link"
+                                rel="noopener nofollow" target="_blank">
+                                <span class="vh">Link to email</span>
+                                <span class="icon-link__text">
+                                    我要提问
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+
+                <h2 style="margin-top: 80px" class="heading--bravo landmark">基础问题</h2>
+                <dl class="badger-accordion js-badger-accordion">
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                Nervos 是什么？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>Nervos Network 是由 Nervos 基金会发起并维护的网络协议标准。</p>
+                            <p>Nervos Network
+                                包含以区块链技术为核心、相互兼容的一组分层协议，通过一层公有链协议保证网络的安全性与去中心化，二层协议提供具有可扩展性的交易和计算服务，以及多个应用层协议衔接商业场景，以此构建<b>下一代加密经济网络的公用基础设施</b>。
+                            </p>
+                            <p><a href="http://www.nervos.org">Nervos 官网</a></p>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                CKB 是什么？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>CKB （Common Knowledge Byte）是 Nervos 底层 Layer1 网络的原生 Token。</p>
+                            CKB 不同于其他公链的原生 Token，持有 CKB Token 还代表拥有一段可以写入数据状态的存储空间，拥有1个 CKB 就意味着你能够在 CKB 的 Layer1 上写入 1
+                            Byte 的数据，这个数据空间是全球共识空间，是节点存储当前全球状态所用的空间，需要存储在节点提供的内存里面，是具有稀缺性的资源。</p>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                Nervos 主要想解决什么问题？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>在设计CKB的时候，我们想要解决三个方面的问题：</p>
+                            <p>1. 状态爆炸引起的公地悲剧及去中心化的丧失，参考阅读：<a
+                                    href="https://talk.nervos.org/t/topic/1515?u=stwith">区块链与状态爆炸</a>；</p>
+                            <p>2. 计算和验证耦合在一起时，使得无论是计算还是验证都失去了灵活性，难以扩展，参考阅读：<a
+                                    href="https://talk.nervos.org/t/layer-1/1486?u=stwith">Layer1应该做什么</a>；</p>
+                            <p>3. 交易与价值存储这两个目标的内在矛盾，Layer 2和跨链的出现将放大这种矛盾，并对Layer 1的经济产生非常负面的影响，参考阅读：<a
+                                    href="https://github.com/nervos-community/RFC-CN">Nervos经济模型提案</a>；</p>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                Nervos 有什么亮点？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>在设计CKB的时候，我们想要解决三个方面的问题：</p>
+                            <p>Nervos CKB主要有以下几个亮点：</p>
+                            <p>1. CKB 共识协议 NC-MAX 使用两阶段提交节约带宽，并根据网络情况调整自身参数，提升了 Nakamoto Consensus 的可扩展性，参考阅读：</p>
+                            <p>
+                                2. CKB 虚拟机采用开源的底层CPU指令集架构RISC-V开发，用真实硬件来保证虚拟机运行的稳定，构建一个更加自然、更能面向未来的运行开销模型，参考阅读：</p>
+                            <p>
+                                3. CKB Cell 模型是通用化的比特币 UTXO 模型，能够存储和验证任何类型的数据，支持智能合约和多种密码学原语,通过Cell 模型，用户将真正拥有一级资产，参考阅读：
+                            </p>
+                            <p>
+                                4. CKB 经济模型用发行政策限制全球状态存储的增长，致力于打造一个价值存储的智能合约平台，保证在分层架构的加密经济网络下实现底层网络的价值沉淀，参考阅读：
+                            </p>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                Nervos 白皮书/经济模型
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p><a href="http://www.nervoscommunity.com/files/Nervos%20White%20Paper.pdf">Nervos
+                                    Whitepaper<a></p>
+                            <p><a href="http://www.nervoscommunity.com/files/Nervos%20Economic%20Paper.pdf">Nervos
+                                    Economic Paper (RFC)</a></p>
+                            <p><a href="http://www.nervoscommunity.com/files/Nervos%20%E7%99%BD%E7%9A%AE%E4%B9%A6.pdf">Nervos
+                                    白皮书中文版</a></p>
+                            <p><a
+                                    href="http://www.nervoscommunity.com/files/Nervos%20%E7%BB%8F%E6%B5%8E%E6%A8%A1%E5%9E%8B%E6%8F%90%E6%A1%88.pdf">Nervos
+                                    经济模型提案中文版</a></p>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                Nervos 和 IPFS 有什么不同
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>CKB不是分布式存储，关键的区别在于，分布式存储只有存储，没有验证，也就不会对其存储的数据形成共识。分布式存储的容量可以随着存储技术的增长而等比例的增长，而CKB的容量则收到形成全球共识效率的限制。
+                            </p>
+                            <p>CKB也不需要担心容量不够。在Layer 2以及分层技术成熟的阶段，极端情况下，Layer 1上可能只需要放一个merkle root就足够了。在Layer
+                                1上进行验证所需要的状态，也可以通过交易提交给节点，节点通过merkle proof验证状态是有效的，在此基础之上再验证状态迁移是有效的，这个方向已经有一些研究。</p>
+                            <p>参考阅读：<a href="https://talk.nervos.org/t/ckb-cell/1562">理解 CKB 的 Cell 模型</a></p>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                CKB 主网什么时候上线？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>CKB 主网预计今年第四季度上线，请大家耐心等待。</p>
+                        </div>
+                    </dd>
+
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                CKB 发行总量？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>目前仅已知 CKB 的创始区块为336亿，其中包含了私募、公募、社区、基金会等部分，CKB的总量目前仍未知，请耐心等待一段时间，官方很快就会公布。</p>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                如何联系到 Nervos 团队？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>Nervos 官网：<a href="https://www.nervos.org">https://www.nervos.org</a></p>
+                            <p>Nervos 论坛：<a href="https://talk.nervos.org">https://talk.nervos.org</a></p>
+                            <p>Medium Blogs：<a
+                                    href="https://medium.com/nervosnetwork">https://medium.com/nervosnetwork</a></p>
+                            <p>Twitter：<a href="https://twitter.com/nervosnetwork">https://twitter.com/nervosnetwork</a>
+                            </p>
+                            <p>Reddit：<a
+                                    href="https://www.reddit.com/r/NervosNetwork">https://www.reddit.com/r/NervosNetwork</a>
+                            </p>
+                            <p>Telegram：<a href="http://t.me/NervosNetwork">http://t.me/NervosNetwork</a></p>
+                            <p>Telegram CN：<a href="http://t.me/NervosNetworkcn">http://t.me/NervosNetworkcn</a></p>
+                            <p>GitHub：<a href="https://github.com/nervosnetwork">https://github.com/nervosnetwork</a>
+                            </p>
+                        </div>
+                    </dd>
+                </dl>
+            </section>
+        </div>
+
+        <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+            <section class="container landmark--double">
+                <h2 class="heading--bravo landmark">挖矿问题</h2>
+                <dl class="badger-accordion js-badger-accordion">
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                如何参与测试网挖矿？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>CKB 测试网已于5月18日开启，目前测试网每两周清链一次</p>
+                            <p>您可以参考以下教程参与挖矿：
+                                <a href="https://docs.nervos.org">官方文档</a>
+                                <a href="https://talk.nervos.org/t/ckb-testnet/1869">社区教程</a>
+                            </p>
+                            <p>如果您在挖矿过程中遇到任何问题，您可以在 NC 社区提出问题，会有热情的社区小伙伴及时解答您的问题</p>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                有挖矿活动吗？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>在没有挖矿活动时，您在 CKB 测试网上挖出的 CKB 是没有实际价值的，仅用于测试和娱乐</p>
+                            <p>在有挖矿活动时，您在 CKB 测试网上进行相关的挖矿活动是可以获得一定激励的，具体活动方案参见：<a
+                                    href="http://mineyourownbusiness.nervos.org">mineyourownbusiness.nervos.org</a>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                测试网算力及出块排行榜
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>您可以前往 <a href="http://explorer.nervos.org">CKB 浏览器</a>查看出块记录、算力难度、出块间隔等具体信息</p>
+                            <p>您可以前往 <a href="http://ckb.yamen.co">挖矿排行榜</a>查看各地址具体排名情况，本排行榜由社区成员@知县提供技术支持。</p>
+                        </div>
+                    </dd>
+                    <!--
+                <dt class="badger-accordion__header">
+                    <button class="badger-accordion__trigger js-badger-accordion-header">
+                        <div class="badger-accordion__trigger-title">
+                            挖矿技术问题
+                        </div>
+                        <div class="badger-accordion__trigger-icon">
+                        </div>
+                    </button>
+                </dt>
+                <dd class="badger-accordion__panel js-badger-accordion-panel">
+                    <div class="js-badger-accordion-panel-inner">
+                        <dl class="badger-accordion js-badger-accordion">
+                            <dt class="badger-accordion__header">
+                                <button class="badger-accordion__trigger js-badger-accordion-header">
+                                    <div class="badger-accordion__trigger-title">
+                                        Child
+                                    </div>
+                                    <div class="badger-accordion__trigger-icon">
+                                    </div>
+                                </button>
+                            </dt>
+                            <dd class="badger-accordion__panel js-badger-accordion-panel">
+                                <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                                    <p>Badgers are short-legged omnivores in the family Mustelidae, which also includes
+                                        otters,
+                                        polecats,
+                                        weasels and wolverines. They belong to the caniform suborder of carnivoran
+                                        mammals.</p>
+                                    <p>Badgers are thought to have got their name because of the white mark – or badge –
+                                        on their
+                                        head,
+                                        although there are other theories.</p>
+                                    <p>Another old name for badgers is ‘brock’, meaning grey. You can often see the word
+                                        brock in
+                                        street names.
+                                        Brock is also the name of a character in the Pokemon TV series!</p>
+                                    <p>Badgers are fast – they can run up to 30km per hour (nearly 20 mph) for short
+                                        periods.</p>
+                                    <a href="#">I am a link to the main content of this page.</a>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </dd>
+            -->
+
+                </dl>
+            </section>
+        </div>
+
+        <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
+            <section class="container landmark--double">
+                <h2 class="heading--bravo landmark">其他问题</h2>
+                <dl class="badger-accordion js-badger-accordion">
+                    <dt class="badger-accordion__header">
+                        <button class="badger-accordion__trigger js-badger-accordion-header">
+                            <div class="badger-accordion__trigger-title">
+                                Nervos 会有私募/公募吗？
+                            </div>
+                            <div class="badger-accordion__trigger-icon">
+                            </div>
+                        </button>
+                    </dt>
+                    <dd class="badger-accordion__panel js-badger-accordion-panel">
+                        <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                            <p>没有私募。Nervos Network 于2018年上半年，获得 2800 万美元私募轮融资，投资方包括国内外十多家机构，由红杉资本中国基金、万向区块链领投。</p>
+                            <p>会有公募。Nervos Network 公募时间预计在2019年第四季度，具体公募方案还在制定中，请耐心等待。</p>
+                        </div>
+                    </dd>
+                    <dt class="badger-accordion__header">
+                            <button class="badger-accordion__trigger js-badger-accordion-header">
+                                <div class="badger-accordion__trigger-title">
+                                    如何购买机械猿及周边产品？
+                                </div>
+                                <div class="badger-accordion__trigger-icon">
+                                </div>
+                            </button>
+                        </dt>
+                        <dd class="badger-accordion__panel js-badger-accordion-panel">
+                            <div class="badger-accordion__panel-inner text-module js-badger-accordion-panel-inner">
+                                <p>您可以前往爱与和平的商店 https://www.cryptape.com/fans 购买您喜爱的周边产品，包括：机械猿、木猿、T恤、纪念马克杯等产品。</p>
+                            </div>
+                        </dd>
+                </dl>
+            </section>
+        </div>
+
+    </main>
+
+    <script src="js/app.js" charset="utf-8"></script>
+</body>
+
+</html>
